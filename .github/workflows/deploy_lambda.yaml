@@ -7,7 +7,10 @@ on:
 jobs:
   lambda:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: python-lambda
     steps:
       - uses: actions/checkout@v3
-      - run: zip -r -j python-lambda.zip ./python-lambda
+      - run: zip -r -j python-lambda.zip .
       - run: unzip -l python-lambda.zip
