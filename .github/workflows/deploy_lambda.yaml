@@ -9,7 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          sparse-checkout: python-lambda
-      - run: zip -r python-lambda.zip .
+      - run: zip -r -j python-lambda.zip ./python-lambda
       - run: unzip -l python-lambda.zip
