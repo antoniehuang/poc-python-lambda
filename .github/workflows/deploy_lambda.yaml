@@ -28,3 +28,6 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
+      - name: Deploy Lambda to AWS
+        run: |
+          aws lambda update-function-code --function-name poc-python-lambda --zip-file fileb://python-lambda.zip
