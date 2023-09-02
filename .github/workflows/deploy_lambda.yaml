@@ -12,3 +12,4 @@ jobs:
         with:
           path: python-lambda
       - run: zip -r python-lambda.zip .
+      - run: unzip -l python-lambda.zip
