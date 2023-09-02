@@ -10,7 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          sparse-checkout: |
-            python-lambda
+          sparse-checkout: python-lambda
       - run: zip -r python-lambda.zip .
       - run: unzip -l python-lambda.zip
